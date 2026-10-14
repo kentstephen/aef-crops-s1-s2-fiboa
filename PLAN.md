@@ -52,6 +52,23 @@ serves an interactive dashboard to drill into fields, years and individual scene
 - Truth panel: province yield per year next to the field's season summary (peak NDVI, season length, early VV).
 - ETL caches to `data/` (gitignored) so the dashboard reloads instantly.
 
+## Readable for non-specialists
+
+Main labels say what a number means; index names stay available in tooltips and a technical toggle.
+
+| Technical | Dashboard label |
+|---|---|
+| NDVI (S2) | Plant vigor (how green and leafy) |
+| NDMI (S2) | Plant water (water held in leaves) |
+| VV / VH backscatter (S1) | Ground wetness, plus crop structure as plants grow |
+| AEF cosine to previous year | How different this year looked from last year |
+| Within-field pixel clusters | Zones inside the field that behave alike |
+
+- A "normal" band from the other years behind the selected year, so the read is above or below normal.
+- One generated sentence per year (green-up timing, peak vs usual, wet or dry spells).
+- Season events (green-up, peak, harvest drop) detected and labeled on the timeline.
+- Above and below normal in blue and orange, never red and green.
+
 ## Open questions
 
 - Site: San Marzano DOP, Sarno plain (decided).
